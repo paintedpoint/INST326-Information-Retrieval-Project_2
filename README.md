@@ -2,7 +2,7 @@
 # Crypto API Wallet and Data Display
 This project intends to pull data from an API (CoinGecko) and then use it to display various data. Users will also have the ability to "buy" various cryptos and see how much their crypto wallet has increased or decreased in value
 
-**Project handled by William, Linwood, Josh, Bushra**
+**Project handled by William, Linwood, Christopher, Bushra**
 
 ***
 This project focuses on cryptocurrency data retrieval and portfolio management. It integrates market data from CoinGecko to provides users with an interactive interface to track crypto investments.
