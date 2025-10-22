@@ -61,7 +61,7 @@ William is in charge of pulling from an API
 
 Linwood is in charge of display for interaction
 
-Josh is in charge of displaying charts
+Christopher is in charge of displaying charts
 
 Bushra is in charge of the interaction with the wallet
 
