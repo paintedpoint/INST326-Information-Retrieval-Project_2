@@ -1,9 +1,65 @@
 import requests
 import pandas as pd 
 import matplotlib.pyplot as plt
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Optional
 from datetime import datetime, timedelta
 
+class MarketData:
+    """
+    Grabs Market data(Cryptocurrency) From API
+    Works by Christopher
+    """
+
+    def __init__(self, start_currency: str = 'usd'):
+        self.start_currency = start_currency
+
+    def previous_update(self):
+        pass
+
+    def fetch_data(self, limit: int = 100):
+        pass
+
+    def get_crypto_price(self, symbol: str):
+        pass
+    
+    def display_top(self, limt: int = 100):
+        pass
+
+class Portfolio_Helper:
+    """
+    Creates a mock portofolio to generate Charts and Graphs
+
+    """   
+
+    def __init__(self, user: str, portfolio_id: str):
+        pass
+
+    def get_user_name(self):
+        pass
+    
+
+class Price_Charts_Graphs:
+    """
+    Generates Charts from Crypto Data
+
+    """
+
+    def __init__(self):
+        self._positive = "#2ecc71"
+        self._negative = "#e74c3c"
+    
+    def create_price_chart(self, market_data = MarketData, top: int = 10):
+        pass
+    
+    def create_changing_chart(self, market_date = MarketData, top: int = 10 ):
+        pass
+
+    
+### DEMO CODE
+
+
+
+'''
 
 def calculate_value_portfolio(holdings: Dict[str, float], df: pd.DataFrame) -> float:
     """
@@ -135,6 +191,6 @@ def portfolio_display(holdings: Dict[str, float], df: pd.DataFrame) -> None:
     except Exception as e:
         print(f"ERROR with portfolio {str(e)}")
 
-
+'''
 
    
