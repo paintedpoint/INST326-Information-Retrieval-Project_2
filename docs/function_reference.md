@@ -8,13 +8,21 @@ This document provides a reference for all major functions in the project. Each 
 
 Module: api_library
 
+Class: PullData
+
+Class: CryptoPortfolio
+
 Module: utils
+
+Class: 
+
+Class: 
 
 ## Module: api_library
 
-**Class: PullData**
+# **Class: PullData** 
 
-{
+# {
 
 ### def get_market_data(self, page: int = 1) -> pd.DataFrame
 
@@ -137,9 +145,93 @@ Outputs:
 
     {'bitcoin': 115109}
 
-}
+# }
+
+# **Class: CryptoPortfolio**
+
+# {
+
+### def buy(self, crypto_id: str, amount: float):
+
+Records a purchase of a specified amount of a cryptocurrency
+
+**Parameters**
+
+    crypto_id: str The CoinGecko ID of the cryptocurrency you want to buy.
+    amount: float The number of units of the cryptocurrency to buy 
+
+**Returns**
+
+The function does not explicitly return anything (return None implicitly). Its main effect is side effects:It prints an error message if the price cannot be fetched. In the full class, it would also update portfolio holdings and transaction history.
+
+**Example**
+
+*Something Here*
+
+**Output**
+
+*Something Here*
+
+### def sell(self, crypto_id: str, amount: float):
+
+The sell function sells a specified amount of a cryptocurrency from the user’s portfolio.
+
+**Parameter**
+
+    crypto_id: str The CoinGecko ID of the cryprocurrency to sell
+    amount: float The quantity of the cryptocurrency to sell
+
+**Examples**
+
+    portfolio.sell('bitcoin', 0.005)
+
+**Output**
+
+*Something Here*
+
+### def portfolio_value(self):
+
+Calculates and displays the total value of the portfolio based on current cryptocurrency holdings and live market prices.
+
+**Returns**
+
+total_value (float) — the sum of the value of all cryptocurrencies in the portfolio.
+If there are no holdings, returns 0.0.
+
+**Example**
+
+    portfolio = MyPortfolioClass()
+    portfolio.holdings = {
+        'BTC': {'amount': 0.5},
+        'ETH': {'amount': 2}
+    }
+    total = portfolio.portfolio_value()
+
+**Output**
+
+*Something Here*
+
+### def show_transactions(self):
+
+Displays the transaction history of the portfolio, showing details of each buy or sell transaction, including time, amount, cryptocurrency, price, and profit for sales.
+
+**Examples**
+
+    portfolio = MyPortfolioClass()
+    portfolio.transactions[{'type': 'SELL', 'crypto': 'ETH', 'amount': 1, 'price': 2000, 'time': '2025-10-12 15:00', 'profit': 100}]
+    portfolio.show_transactions()
+
+**Output**
+
+*Something Here*
+
+# }
 
 ## Module: utils
+
+# **Class: _______**
+
+# {
 
 ### def display_market_data(df: pd.DataFrame, limit: int = 10) -> None
 
@@ -185,62 +277,15 @@ A user interface including user selection
     market_data = dataPuller.get_market_data()
     user_interaction(market_data)
 
-### def buy(self, crypto_id: str, amount: float):
+# }
 
-Records a purchase of a specified amount of a cryptocurrency
+# **Class: _____**
 
-**Parameters**
-    crypto_id: str The CoinGecko ID of the cryptocurrency you want to buy.
-    amount: float The number of units of the cryptocurrency to buy 
-
-**Returns**
-The function does not explicitly return anything (return None implicitly). Its main effect is side effects:It prints an error message if the price cannot be fetched. In the full class, it would also update portfolio holdings and transaction history.
-
-**Example**
-
-
-### def sell(self, crypto_id: str, amount: float):
-
-The sell function sells a specified amount of a cryptocurrency from the user’s portfolio.
-
-**Parameter**
-    crypto_id: str The CoinGecko ID of the cryprocurrency to sell
-    amount: float The quantity of the cryptocurrency to sell
-
-**Returns**
-The function does not return anything (return None). Its effect is side effects: Updates self.holdings, adds a record to self.transactions, prints a summary message
-
-**Examples**
-    portfolio.sell('bitcoin', 0.005)
-
-**Related Functions**
+# {
 
 
 
-### def portfolio_value(self):
-
-Calculates and displays the total value of the portfolio based on current cryptocurrency holdings and live market prices.
-
-**Returns**
-total_value (float) — the sum of the value of all cryptocurrencies in the portfolio.
-If there are no holdings, returns 0.0.
-
-**Examples**
-    portfolio = MyPortfolioClass()
-    portfolio.holdings = {
-        'BTC': {'amount': 0.5},
-        'ETH': {'amount': 2}
-    }
-    total = portfolio.portfolio_value()
-
-### def show_transactions(self):
-
-Displays the transaction history of the portfolio, showing details of each buy or sell transaction, including time, amount, cryptocurrency, price, and profit for sales.
-
-**Examples**
-    portfolio = MyPortfolioClass()
-    portfolio.transactions[{'type': 'SELL', 'crypto': 'ETH', 'amount': 1, 'price': 2000, 'time': '2025-10-12 15:00', 'profit': 100}]
-    portfolio.show_transactions()
+# }
 
 # Function Reference Structure:
 
