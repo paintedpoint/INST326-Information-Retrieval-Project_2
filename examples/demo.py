@@ -40,7 +40,7 @@ class Portfolio_Helper:
 
 class Price_Charts_Graphs:
     """
-    Generates Charts from Crypto Data
+    Generates Charts from Crypto Data Using matplot
 
     """
 
@@ -57,6 +57,10 @@ class Price_Charts_Graphs:
     
 ### DEMO CODE
 
+def _main(self):
+    pass
+
+# ******* Writing Demo code in the area *********
 
 
 '''
