@@ -305,3 +305,5 @@ class CryptoPortfolio:
             else:
                 print(f"{t['time']} | SELL {t['amount']} {t['crypto']} @ ${t['price']:.2f} "
                       f"(Profit: ${t['profit']:.2f})")
+                
+
